@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	<Button
+	    android:id="@+id/show_pop_up" 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="bottom"
+	    android:layout_marginBottom="25dp"
+	    android:text="Show Pop Up"/>
+		<com.dharani.popupsample.TransparentPanel
+		    android:id="@+id/pop_window"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+			android:layout_gravity="bottom"
+			android:gravity="left"
+			android:padding="1dp"
+			android:orientation="vertical">
+		    
+		    <RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:orientation="vertical"
+		        android:gravity="right"
+		        android:background="@drawable/button_bar_gradient"
+		       >
+		        
+		        <Button android:id="@+id/hide_popup_button"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp" android:paddingLeft="5dp"
+                android:paddingRight="dp" style="?android:attr/buttonStyleSmall"
+                android:textStyle="bold" android:textSize="12sp" 
+                android:background="@drawable/button_close"
+                android:text="Close" 
+                />
+		        <LinearLayout 
+                android:orientation="vertical" android:layout_width="match_parent"
+                android:layout_height="1dp" android:layout_marginTop="5dp"
+                android:layout_below="@+id/hide_popup_button" />
+		    </RelativeLayout>
+		    
+		    <TextView android:id="@+id/location_name"
+		        android:textIsSelectable="true"
+            	android:layout_width="wrap_content" android:layout_height="wrap_content"
+            	android:textStyle="bold" android:textSize="16sp"
+            	android:layout_marginTop="5dp" android:layout_marginLeft="5dp" />
+ 
+        	<TextView android:id="@+id/location_description"
+            	android:layout_width="wrap_content" android:layout_height="wrap_content"
+            	android:textIsSelectable="true"
+            	android:layout_margin="5dp" />
+		    
+		</com.dharani.popupsample.TransparentPanel>
+</FrameLayout>
